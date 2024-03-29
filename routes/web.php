@@ -1,7 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\gaji;
+use App\Http\Controllers\presensi;
+use App\Http\Controllers\home;
+use App\Http\Controllers\jabatan;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,6 +16,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+
+Route::get ('gaji', [Gaji::class, 'index', ]);
+Route::get ('presensi', [Presensi::class, 'index', ]);
+Route::get ('home', [Home::class, 'index', ]);
+Route::get ('jabatan', [Jabatan::class, 'index', ]);
